@@ -1,0 +1,14 @@
+name: "Multi-Event Pipeline/workflow"
+on:
+  push:
+    branches:
+      - main
+
+
+      
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "running on main push branch"
+        run: echo "Hello, World!"    
