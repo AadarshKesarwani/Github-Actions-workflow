@@ -24,3 +24,9 @@ jobs:
     steps:
       - name: "running on main pull request branch"
         run: echo "Hello, World!"
+  on-workflow-dispatch:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "running on workflow dispatch event"
+        run: echo "Hello, World!"      
